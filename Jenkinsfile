@@ -21,7 +21,7 @@ pipeline {
 			//sh 'sudo python3 -m venv myenv'
 			sh 'cd myenv/bin/activate '
 			sh 'ls'
-			sh 'source myenv/bin/activate'
+			sh 'source myenv\bin\activate'
 			sh 'pip install pandas'
 		      	sh 'python data_analysis.py'
                     } else {
