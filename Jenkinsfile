@@ -16,14 +16,12 @@ pipeline {
                 script {
                     if (isUnix()) {
                         sh 'echo "Running on Unix"'
-                        sh 'pip install virtualenv' 
-			            //  bat 'cd C:/Windows/System32'
-			            sh 'py -m virtualenv madiha_env'
-			           //  bat 'C:/Windows/System32/madiha_env/Scripts'
-			            sh 'activate.bat'
-			           //  bat 'cd C:/Windows/System32' 
-			            sh 'python3 pip install pandas'                   
- 			            sh 'python data_analysis.py'
+			sh 'apt install python3-pip'
+			sh 'apt install python3.11-venv'
+			sh 'sudo python3 -m venv myenv'
+			sh 'source myenv/bin/activate'
+			sh 'pip install pandas'
+		      	sh 'python data_analysis.py'
                     } else {
                         
                         bat 'echo "Running on Windows"'
