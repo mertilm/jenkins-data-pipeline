@@ -2,9 +2,10 @@ pipeline {
     agent any
     environment {
         //JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_202'
-        PYTHON_HOME = 'C:\\Users\\ouldache\\AppData\\Local\\Programs\\Python\\Launcher\\'
+        //PYTHON_HOME = 'C:\\Users\\ouldache\\AppData\\Local\\Programs\\Python\\Launcher\\'
        // PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
-	 PATH="${env.PATH}:/usr/bin"
+	PATH = "${env.PATH}:/usr/bin/python3"
+	// PATH="${env.PATH}:/usr/bin"
     }
     stages {
         stage('Checkout') {
