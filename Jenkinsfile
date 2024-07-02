@@ -24,9 +24,9 @@ pipeline {
 			//sh 'apt install python3-pip'
 			//sh 'apt install python3.11-venv'
 			//sh 'sudo python3 -m venv myenv'
-			sh 'cd ./myenv/bin/activate '
-			sh 'ls'
-			sh 'source myenv/bin/activate'
+			//sh 'cd ./myenv/bin/activate '
+			//sh 'ls'
+			//sh 'source myenv/bin/activate'
 			sh 'pip install pandas'
 		      	sh 'python3 data_analysis.py'
                     } else {
