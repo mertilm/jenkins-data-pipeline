@@ -1,9 +1,10 @@
 pipeline {
     agent any
     environment {
-        JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_202'
-        PYTHON_HOME = 'C:\\Users\\ouldache\\AppData\\Local\\Programs\\Python\\Launcher\\'
-        PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
+        //JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_202'
+        //PYTHON_HOME = 'C:\\Users\\ouldache\\AppData\\Local\\Programs\\Python\\Launcher\\'
+       // PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
+	 PATH="${env.PATH}:/usr/bin"
     }
     stages {
         stage('Checkout') {
@@ -19,11 +20,11 @@ pipeline {
 			//sh 'apt install python3-pip'
 			//sh 'apt install python3.11-venv'
 			//sh 'sudo python3 -m venv myenv'
-			sh 'cd ./myenv/bin/activate '
-			sh 'ls'
-			sh 'source myenv/bin/activate'
-			//sh 'pip install pandas'
-		      	sh 'python data_analysis.py'
+			//sh 'cd ./myenv/bin/activate '
+			//sh 'ls'
+			//sh 'source myenv/bin/activate'
+			sh 'pip install pandas'
+		      	sh 'python3 data_analysis.py'
                     } else {
                         
                         bat 'echo "Running on Windows"'
