@@ -35,7 +35,7 @@ pipeline {
                        // bat './temp/Scripts/acivate.bat'
                        // bat 'python'
                        // bat 'pip install -r requirements.txt'
-                       bat 'python data_analysis.py'  
+                       bat 'python3 data_analysis.py'  
 
                     }
                 }
