@@ -18,7 +18,7 @@ pipeline {
                     if (isUnix()) {
                         sh 'echo "Running on Unix"'
 			sh 'apt install python3-pip'
-			//sh 'apt install python3.11-venv'
+			sh 'apt install python3.11-venv'
 			//sh 'sudo python3 -m venv myenv'
 			//sh 'cd ./myenv/bin/activate '
 			//sh 'ls'
