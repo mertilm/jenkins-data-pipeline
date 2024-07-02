@@ -32,9 +32,9 @@ pipeline {
                         bat 'echo "Running on Windows"'
 			bat 'cd C:/Python30/jenkins-data-pipeline'
                        // bat 'virtualenv temp'
-                       // bat './temp/Scripts/acivate.bat'
+                        bat './madiha_env/Scripts/acivate.bat'
                        // bat 'python'
-                       bat 'pip install -r requirements.txt'
+                       bat 'python pip install -r requirements.txt'
                        bat 'python data_analysis.py'  
 
                     }
