@@ -17,6 +17,7 @@ pipeline {
                 script {
                     if (isUnix()) {
                         sh 'echo "Running on Unix"'
+			sh 'sudo apt-get update && sudo apt-get upgrade'
 			sh 'apt install python3-pip'
 			sh 'apt install python3.11-venv'
 			//sh 'sudo python3 -m venv myenv'
