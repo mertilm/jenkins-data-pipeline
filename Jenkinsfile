@@ -28,7 +28,7 @@ pipeline {
 			//sh 'ls'
 			//sh 'source myenv/bin/activate'
 			//sh 'pip install pandas'
-		      	//sh 'python3 data_analysis.py'
+		      	sh 'python3 data_analysis.py'
                     } else {
                         
                         bat 'echo "Running on Windows"'
