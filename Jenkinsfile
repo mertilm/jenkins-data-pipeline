@@ -30,11 +30,12 @@ pipeline {
                     } else {
                         
                         bat 'echo "Running on Windows"'
+			bat 'cd C:/Python30/jenkins-data-pipeline'
                        // bat 'virtualenv temp'
                        // bat './temp/Scripts/acivate.bat'
                        // bat 'python'
                        // bat 'pip install -r requirements.txt'
-                       // bat 'python data_analysis.py'  
+                       bat 'python data_analysis.py'  
 
                     }
                 }
